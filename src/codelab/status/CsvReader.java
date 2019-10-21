@@ -11,7 +11,7 @@ public class CsvReader {
 
     public static void main(String[] args) {
 
-        /*Coma Separated Value(CSV) of your CodeLab status is downloaded and it parsed.
+              /*Coma Separated Value(CSV) of your CodeLab status is downloaded and it parsed.
                 Based on number of solution you solved, message is generated for you.
                 You need to find the average score of the class.*/
 
@@ -32,7 +32,6 @@ public class CsvReader {
                 String[] name = line.split(csvSplitBy);
                 roster.add(new Trainee(name[5].replace("\"", ""), name[4].replace("\"",
                         ""), Integer.parseInt(name[10])));
-
             }
 
         } catch (IOException e) {
@@ -41,16 +40,16 @@ public class CsvReader {
         Collections.sort(roster);
         for (Trainee student : roster) {
             if (student.getNumberOfExercisesSolved() >= 500) {
-                System.out.print("You did pretty good-->                    ");
+                System.out.print("You did pretty good-->                      ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
             } else if (student.getNumberOfExercisesSolved() >= 400 && student.getNumberOfExercisesSolved() < 500) {
-                System.out.print("You could do better-->                    ");
+                System.out.print("You could do better-->                      ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
             } else if (student.getNumberOfExercisesSolved() >= 300 && student.getNumberOfExercisesSolved() < 400) {
-                System.out.print("You should have done more-->              ");
+                System.out.print("You should have done more-->               ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
             } else if (student.getNumberOfExercisesSolved() >= 200 && student.getNumberOfExercisesSolved() < 300) {
-                System.out.print("You haven't done enough-->                 ");
+                System.out.print("You haven't done enough-->                  ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
             } else if (student.getNumberOfExercisesSolved() >= 100 && student.getNumberOfExercisesSolved() < 200) {
                 System.out.print("You did not take this course seriously-->   ");
@@ -58,10 +57,8 @@ public class CsvReader {
             } else if (student.getNumberOfExercisesSolved() < 100) {
                 System.out.print("Shame on You !-->                           ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
-
              }
           }
-
           double total = 0;
           double stcount = 0;
           for (Trainee scores: roster) {
